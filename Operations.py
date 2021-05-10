@@ -1,7 +1,9 @@
 class Operations:
     
-    def setOption(self,index):
+    def setOption(self,index,cadena):
+        self.contador = 0
         self.index = index
+        self.cadena = cadena
         if index == 0:
             self.operation0()
         elif index == 1:
@@ -10,12 +12,66 @@ class Operations:
             self.operation2()
         elif index == 3:
             self.operation3()
+        elif index == 4:
+            self.operation4()
+        elif index == 5:
+            self.operation5()
+        elif index == 6:
+            self.operation6()
+        elif index == 7:
+            self.operation7()
+        elif index == 8:
+            self.operation8()
+    
+    def checkNumbers(self):
+        for i in range(0, len(self.cadena)):
+            if int(self.cadena[i]) > 1:
+                print('salio un 2')
+                return True
+                break
+            else:
+                print('sigue la condicion')
+
     def operation0(self):
-        print('Operacion 0')
+        if self.cadena[0] != 'b':
+            print('No se cumple la condicion')
+            print(self.cadena[i])
+        else:
+            print('El codigo Continua')
+        if self.cadena[len(self.cadena)-1] == 'c' and self.cadena[len(self.cadena) == 'b']:
+            print('Se cumple la cadena')
+        else:
+            print('No se cumple la condicion')
     def operation1(self):
+        if self.checkNumbers() == True:
+            print('Tiene un numero que no es 0 y uno')
+        else:
+            for i in range(0,len(self.cadena)):
+                if int(self.cadena[i]) == 0 and int(self.cadena[i+1]) == 0:
+                    print('Se cumple la condicion')
+                else:
+                    print('No se cumplio la condicion')
+                    break
         print('Operacion 1')
     def operation2(self):
+        for i in range(0, len(self.cadena)):
+            if self.cadena[i] == 'c':
+                self.contador = self.contador +1
+                print('C cargada', self.contador)
+        if self.contador % 2 == 0:
+            print("Cantidad de C's pares")
+        else:
+            print('No se cumple la condicion')
         print('Operacion 2')
     def operation3(self):
         print('Operacion 3')    
-        
+    def operation4(self):
+        print('Operacion 4') 
+    def operation5(self):
+        print('Operacion 5') 
+    def operation6(self):
+        print('Operacion 6') 
+    def operation7(self):
+        print('Operacion 7') 
+    def operation8(self):
+        print('Operacion 8')    

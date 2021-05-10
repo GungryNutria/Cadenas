@@ -20,10 +20,11 @@ exercises = [
     "Numero par de a's e impar de b's"
 ]
  
-def clickMe():
-    label.configure(text= 'Hello ' + name.get())
 def callbackFunc(event):
-    o.setOption(combo.current())
+    if len(name.get()) == 0 or name.get()[0] == ' ':
+        print('Cadena Vacia')
+    else:
+        o.setOption(combo.current(),name.get())
  
 label = ttk.Label(window, text = "Ingresar Cadena ")
 label.grid(column = 0, row = 1)
