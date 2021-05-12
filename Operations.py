@@ -2,6 +2,8 @@ class Operations:
 
     def setOption(self, index, cadena):
         self.contador = 0
+        self.pares = 0
+        self.impares = 0
         self.index = index
         self.cadena = cadena
         if index == 0:
@@ -91,16 +93,64 @@ class Operations:
             print('Operacion 3 \n ---------------------------')
 
     def operation4(self):
+        for i in range(0,len(self.cadena)):
+            if self.cadena[i] == 'a' and self.cadena[i+1] == 'b':
+                print('No se cumple la condicion')
+                break
+            else:
+                print('La cadena continua')
+        if self.cadena[len(self.cadena)-1] == 'c':
+            print('Se cumple segunda condicion')
+        else:
+            print('No se cumple la segunda condicion')
         print('Operacion 4')
 
     def operation5(self):
+        if self.cadena[0] == 'c':
+            print('Si se cumple la primer condicion')
+            if self.cadena[len(self.cadena)-2] == 'c' and self.cadena[len(self.cadena)-1] == 'b':
+                print('Si se cumple la segunda condicion')
+            else:
+                print('No se cumple la segunda condicion')
+        else:
+            print('No se cumple la primer condicion')
         print('Operacion 5')
 
     def operation6(self):
+        for i in range(0,len(self.cadena)):
+            if self.cadena[i] == 'c' and self.cadena[i+1] == 'c' and self.cadena[i+2] == 'c':
+                print('No se cumple la condicion')
+                break
+            else:
+                print('Se cumple la condicion')
         print('Operacion 6')
 
     def operation7(self):
+        for i in range(0,len(self.cadena)):
+            if self.cadena[i] == 'a' and self.cadena[i+1] == 'b':
+                print('Se cumple la primer condicion')
+            else:
+                print('No cumple la primer condicion')
+            
+            if self.cadena[i] == 'b' and self.cadena[i+1] == 'a':
+                print('No se cumple la segunda condicion')
+            else:
+                print('si se cumple la segunda condicion')
+                
         print('Operacion 7')
 
     def operation8(self):
+        for i in range(0,len(self.cadena)):
+            if self.cadena[i] == 'a':
+                self.pares = self.pares +1
+            elif self.cadena[i] == 'b':
+                self.impares = self.impares +1
+        if (self.pares % 2) == 0:
+            print('Si cumple la primera condicion')
+            if(self.impares % 2) == 0:
+                print('No se cumple la segunda condicion')
+            else:
+                print('Si se cumple la segunda condicion')
+        else:
+            print('No se cumple la primera condicion')
         print('Operacion 8')

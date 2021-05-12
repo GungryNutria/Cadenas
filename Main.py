@@ -15,7 +15,7 @@ exercises = [
     'Inicia con 1 y contiene la subcadena 01 y termina con 0',
     'No contiene ab y termina con c',
     'Empieza con c y termina con cb',
-    'No contiene contiene ccc',
+    'No contiene ccc',
     'Contiene ab pero no ba',
     "Numero par de a's e impar de b's"
 ]
